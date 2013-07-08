@@ -3,13 +3,13 @@ var express = require('express');
 var fs = require('fs');
 
 //Global Vars
-var infile = "index.html";
+var infile = "./index.html";
 
 //Server
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  //var fileData = fs.readFile(infile, 'utf8');
+  var fileData = fs.readFileSync(infile, 'utf8');
 
   var fileData = "teste";
   response.send(fileData);
