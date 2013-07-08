@@ -9,8 +9,9 @@ var infile = "index.html";
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var fileData = fs.readFile(infile, 'utf8');
+  //var fileData = fs.readFile(infile, 'utf8');
 
+  var fileData = "teste";
   response.send(fileData);
 });
 
