@@ -11,7 +11,6 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
   var fileData = fs.readFileSync(infile, 'utf8');
 
-  var fileData = "teste";
   response.send(fileData);
 });
 
