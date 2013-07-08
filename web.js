@@ -1,9 +1,17 @@
+//Libs
 var express = require('express');
+var fs = require('fs');
 
+//Global Vars
+var infile = "index.html";
+
+//Server
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  var fileData = fs.readFile(infile, 'utf8');
+
+  response.send(fileData);
 });
 
 var port = process.env.PORT || 5000;
